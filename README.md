@@ -3,6 +3,7 @@
 <img src="Capture d'écran/Capture d'écran 2026-07-26 143917.png" alt="Boite a outils de 10 fonctions" width="600" />
 
 Ce projet présente une petite bibliothèque de dix fonctions JavaScript réutilisables. La page web génère automatiquement une documentation et des exemples d'utilisation pour chaque fonction.
+Cliquez ici : <a href="https://mierejoseph-maker.github.io/boite-a-outils-de-10-fonctions"/>Boite a outils de 10 fontions</a> pour voir la page en entier
 
 ## Fichiers du projet
 
