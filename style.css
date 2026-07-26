@@ -1,0 +1,231 @@
+:root {
+  --vert: #10b981;
+  --rouge: #ef4444;
+  --bleu: #2563eb;
+  --violet: #7c3aed;
+  --orange: #ea580c;
+  --texte: #111827;
+  --texte-clair: #6b7280;
+  --fond: #f3f4f6;
+  --carte: #ffffff;
+  --bordure: #e5e7eb;
+  --fond-exemple: #f9fafb;
+  --fond-code: #111827;
+  --texte-code: #f9fafb;
+  --ombre: rgba(0, 0, 0, 0.06);
+  --rayon: 14px;
+  --espace: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+  padding: var(--espace);
+}
+
+.entete,
+.pied {
+  max-width: 1200px;
+  margin: 0 auto 1.5rem;
+  text-align: center;
+}
+
+.entete h1 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 0.35rem;
+}
+
+.sous-titre {
+  color: var(--texte-clair);
+}
+
+.page {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) 1fr;
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.sommaire {
+  position: sticky;
+  top: 1rem;
+  background: var(--carte);
+  padding: 1.25rem;
+  border-radius: var(--rayon);
+  box-shadow: 0 8px 30px var(--ombre);
+}
+
+.sommaire ul {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.sommaire a {
+  color: var(--texte);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.sommaire a:hover {
+  color: var(--bleu);
+}
+
+.contenu {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.carte {
+  background: var(--carte);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px var(--ombre);
+}
+
+.intro p {
+  margin-top: 0.6rem;
+  color: var(--texte-clair);
+}
+
+.fonction-card {
+  background: var(--carte);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px var(--ombre);
+}
+
+.fonction-en-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.fonction-en-tete h3 {
+  font-size: 1.2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: white;
+}
+
+.badge-nombres {
+  background: var(--bleu);
+}
+
+.badge-chaines {
+  background: var(--violet);
+}
+
+.badge-conversion {
+  background: var(--orange);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0.85rem 0 1rem;
+  color: var(--texte-clair);
+}
+
+.meta code,
+.signature {
+  color: var(--texte);
+  font-weight: 600;
+}
+
+.exemples {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.bloc-exemple {
+  border: 1px solid var(--bordure);
+  border-radius: 12px;
+  padding: 0.9rem;
+  background: var(--fond-exemple);
+}
+
+.bloc-exemple h4 {
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  background: var(--fond-code);
+  color: var(--texte-code);
+  padding: 0.9rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+code {
+  font-family: "Cascadia Code", Consolas, monospace;
+}
+
+.resultat {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: var(--vert);
+}
+
+.demo-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.demo-item {
+  border: 1px solid var(--bordure);
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: var(--fond-exemple);
+}
+
+.demo-item strong {
+  color: var(--bleu);
+}
+
+@media (max-width: 860px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .sommaire {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 0.8rem;
+  }
+
+  .fonction-en-tete,
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
